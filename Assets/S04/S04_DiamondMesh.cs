@@ -16,7 +16,15 @@ public class S04_DiamondMesh : MonoBehaviour
         };
         int [] triangles = new int[]
         {
+            0, 1, 2,
+            0, 2, 3,
+            0, 3, 4,
+            0, 4, 1,
 
+            5, 2, 1,
+            5, 3, 2,
+            5, 4, 3,
+            5, 1, 4
         };
         Mesh mesh = new Mesh();
         mesh.vertices = vertices;
