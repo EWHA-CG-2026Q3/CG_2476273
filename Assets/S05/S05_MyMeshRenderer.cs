@@ -17,7 +17,7 @@ public class S05_MyMeshRenderer : MonoBehaviour
         targetImage = GetComponent<RawImage>();
         canvasTexture = new Texture2D(canvasWidth, canvasHeight);
         canvasTexture.filterMode = FilterMode.Point;
-        FillBackground(colorA);
+        FillVerticalStripes(patternSize, colorA, colorB);
         canvasTexture.Apply();
         targetImage.texture = canvasTexture;
     }
