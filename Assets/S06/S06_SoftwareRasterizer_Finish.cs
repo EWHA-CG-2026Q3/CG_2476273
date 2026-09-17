@@ -5,9 +5,9 @@ public class S06_SoftwareRasterizer_Finish : MonoBehaviour
 {
     [SerializeField] private int canvasWidth = 256;
     [SerializeField] private int canvasHeight = 256;
-    // 새로운 좌표로 수정 
-    [SerializeField] private Vector2 vertexA = new Vector2(128, 235);
-    [SerializeField] private Vector2 vertexB = new Vector2(25, 25);
+    // 새로운 좌표로 수정 + A와 B의 좌표 바꾸기
+    [SerializeField] private Vector2 vertexA = new Vector2(25, 25);
+    [SerializeField] private Vector2 vertexB = new Vector2(128, 235);
     [SerializeField] private Vector2 vertexC = new Vector2(230, 45);
     // 새로운 색상으로 수정 
     [SerializeField] private Color fillColor = new Color(0.2f, 0.9f, 0.4f, 1f);
