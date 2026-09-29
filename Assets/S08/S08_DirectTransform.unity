@@ -443,7 +443,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111491419}
-  m_Mesh: {fileID: 1432777288}
+  m_Mesh: {fileID: 1909670158}
 --- !u!114 &1111491427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7e696b286894b29b8d8d87a3d62812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S08_DirectTransform
-  demoMode: 6
+  demoMode: 7
   targetTranslation: {x: 3, y: 0, z: 0}
   targetScale: {x: 2, y: 1, z: 1}
   targetAngle: 90
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!43 &1432777288
+--- !u!43 &1909670158
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
