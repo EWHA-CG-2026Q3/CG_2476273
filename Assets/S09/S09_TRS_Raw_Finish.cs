@@ -38,6 +38,12 @@ public class S09_TRS_Raw_Finish : MonoBehaviour
         h = MultiplyMatrixVectorRaw(R, h); Debug.Log($"R 적용 → {h}");
         h = MultiplyMatrixVectorRaw(T, h); Debug.Log($"T 적용 → {h}");
         Debug.Log($"네 번째 성분을 떼면 → {FromHomogeneous(h)}");
+        float[,] H = ShearMatrixRaw(shearK);
+
+        Vector4 top = ToHomogeneous(new Vector3(0.5f, 1f, 0.5f));
+        top = MultiplyMatrixVectorRaw(H, top);
+
+        Debug.Log($"Shear k={shearK}: top vertex → {FromHomogeneous(top)}");
     }
 
     // ---------- 행렬 빌더 ----------
