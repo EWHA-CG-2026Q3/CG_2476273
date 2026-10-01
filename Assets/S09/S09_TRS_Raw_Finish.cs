@@ -21,7 +21,7 @@ public class S09_TRS_Raw_Finish : MonoBehaviour
     {
         if (diamondMesh == null || diamondMesh.BaseVertices == null) return;
 
-        Vector3[] verts = ApplyTRS_Raw(diamondMesh.BaseVertices, t, angle, s);
+        Vector3[] verts = ApplyShearRaw(diamondMesh.BaseVertices, shearK);
         diamondMesh.SetVertices(verts);
     }
 
@@ -127,6 +127,19 @@ public class S09_TRS_Raw_Finish : MonoBehaviour
             h = MultiplyMatrixVectorRaw(S, h);   // 1. 스케일
             h = MultiplyMatrixVectorRaw(R, h);   // 2. 회전
             h = MultiplyMatrixVectorRaw(T, h);   // 3. 이동
+            verts[i] = FromHomogeneous(h);
+        }
+        return verts;
+    }
+    Vector3[] ApplyShearRaw(Vector3[] baseVertices, float k)
+    {
+        float[,] H = ShearMatrixRaw(k);
+
+        Vector3[] verts = new Vector3[baseVertices.Length];
+        for (int i = 0; i < baseVertices.Length; i++)
+        {
+            Vector4 h = ToHomogeneous(baseVertices[i]);
+            h = MultiplyMatrixVectorRaw(H, h);
             verts[i] = FromHomogeneous(h);
         }
         return verts;
