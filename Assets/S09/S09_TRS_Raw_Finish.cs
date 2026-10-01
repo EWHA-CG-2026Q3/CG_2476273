@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-// 동차좌표와 4×4 행렬로 스케일 → 회전 → 이동을 적용하는 스크립트
-// Unity의 Matrix4x4 타입 없이 float[4,4] 배열만으로 계산함
 [ExecuteAlways]
 [RequireComponent(typeof(DiamondMesh))]
 public class S09_TRS_Raw_Finish : MonoBehaviour
